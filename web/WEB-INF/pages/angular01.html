@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular01</title>
+    <script src="../js/angular/angular.js"></script>
+</head>
+<body>
+<div ng-app="">
+    <p>Name:<input type="text" ng-model="name"></p>
+    <p>Quantity:<input type="text" ng-model="quantity"></p>
+    <p>Price:<input type="number" ng-model="price"></p>
+    <h1>
+        Hello,<span ng-bind="name"></span>
+        total:{{quantity*price}}
+    </h1>
+</div>
+</body>
+</html>
