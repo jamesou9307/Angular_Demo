@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular03</title>
+    <script src="../js/angular/angular.js"></script>
+    <style>
+        body{
+            background-color: #ddf;
+            font:16px bold helvetica,arial,sans-serif;
+        }
+        input{
+            padding: 10px;
+        }
+        #list-contianer{
+            background-color: white;
+            color: #448;
+            border-radius: 25px;
+            border:1px solid black;
+            padding: 25px;
+
+        }
+    </style>
+</head>
+<body ng-app ng-init="departments=[
+{name:'Sales',contact:'James'},
+{name:'Development',contact:'Wing'},
+{name:'Marketing',contact:'Allen'},
+{name:'Management',contact:'Ben'},
+{name:'Service',contact:'John'},
+]">
+<p>Search Departments:<input type="text" placeholder="Enter search string" ng-model="searchString"></p>
+<div id="list-contianer">
+    <ul>
+        <li ng-repeat="dept in departments | filter:searchString">{{dept.name+"("+dept.contact+")"}}</li>
+    </ul>
+</div>
+</body>
+</html>
